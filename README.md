@@ -43,7 +43,7 @@ Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) for more detailed information
 
 ## Reporting Issues
 
-If you encounter any issues or have suggestions for improvements, please [open an issue](https://github.com/your-github-username/dbt-lint/issues) on GitHub with a detailed description of the problem or suggestion. Include any relevant details that could help us understand or reproduce the issue.
+If you encounter any issues or have suggestions for improvements, please [open an issue](https://github.com/rawlsy-py/dbt-lint/issues) on GitHub with a detailed description of the problem or suggestion. Include any relevant details that could help us understand or reproduce the issue.
 
 ## License
 
