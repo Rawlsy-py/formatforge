@@ -1,4 +1,5 @@
 # tests/test_uppercase.py
+"""Test the uppercase module."""
 
 import pytest
 from dbt_lint.uppercase import (
@@ -14,6 +15,10 @@ from dbt_lint.uppercase import (
         ("Mixed CaSe SeLeCt;", "Mixed CaSe SELECT;"),
         ("select select from where where;", "SELECT SELECT FROM WHERE WHERE;"),
         ("no keywords here;", "no keywords here;"),
+        (
+            "select case(when 1 > myfield then 1 else null) from mytable where myfield like '%'",
+            "SELECT CASE(WHEN 1 > myfield THEN 1 ELSE null) FROM mytable WHERE myfield LIKE '%'",
+        ),
     ],
 )
 def test_convert_keywords_to_uppercase(input_sql, expected_output):
