@@ -9,7 +9,7 @@ A simple linter for dbt (Data Build Tool) projects, designed to help you maintai
 To install `dbt-lint`, clone the repository and run the following command within the cloned directory:
 
 ```bash
-poetry install
+$ poetry install
 ```
 
 This command creates a virtual environment and installs all necessary dependencies.
@@ -19,7 +19,7 @@ This command creates a virtual environment and installs all necessary dependenci
 After installation, you can run `dbt-lint` to lint your dbt project files. Here's a basic example:
 
 ```bash
-poetry run dbt-lint --file path/to/your/model.sql
+$ dbt-lint --file path/to/your/model.sql
 ```
 
 Replace `path/to/your/model.sql` with the actual path to the SQL file you want to lint.
