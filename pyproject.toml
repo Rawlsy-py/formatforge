@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "A simple linter for dbt projects"
 authors = ["Rawlsy-py <christopher_m_mitchell@live.co.uk>"]
 readme = "README.md"
-packages = [{ include = "dbt_lint" }]
+packages = [{ include = "formatforge" }]
 
 [tool.poetry.scripts]
 formatforge = "formatforge.main:app"
