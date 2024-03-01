@@ -1,5 +1,5 @@
 import pytest
-from dbt_lint.uppercase import convert_keywords_to_uppercase
+from formatforge.uppercase import convert_keywords_to_uppercase
 
 
 def test_convert_keywords_to_uppercase():

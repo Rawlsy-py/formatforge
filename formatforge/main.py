@@ -1,5 +1,5 @@
 import typer
-from dbt_lint.uppercase import convert_keywords_to_uppercase
+from formatforge.uppercase import convert_keywords_to_uppercase
 
 app = typer.Typer()
 

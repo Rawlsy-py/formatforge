@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "dbt-lint"
+name = "formatforge"
 version = "0.1.0"
 description = "A simple linter for dbt projects"
 authors = ["Rawlsy-py <christopher_m_mitchell@live.co.uk>"]
@@ -7,7 +7,7 @@ readme = "README.md"
 packages = [{ include = "dbt_lint" }]
 
 [tool.poetry.scripts]
-dbt-lint = "dbt_lint.main:app"
+formatforge = "formatforge.main:app"
 
 
 [tool.poetry.dependencies]
