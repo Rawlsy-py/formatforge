@@ -1,49 +1,28 @@
-"""Main module for the dbt-lint CLI."""
-
 import typer
-from uppercase import convert_keywords_to_uppercase
+from dbt_lint.uppercase import convert_keywords_to_uppercase
 
 app = typer.Typer()
 
 
+@app.callback()
+def callback():
+    """
+    dbt-lint is a linter for dbt projects.
+    """
+
+
 @app.command()
-def format_sql(
-    file_path: str = typer.Argument(
-        ..., help="The path to the SQL file to be formatted"
-    ),
-    uppercase: bool = typer.Option(True, help="Convert SQL keywords to uppercase"),
-    leading_comma: bool = typer.Option(True, help="Use leading commas in SQL lists"),
-):
+def hello():
     """
-    Formats a given SQL file according to specified style guidelines.
+    Say hello.
     """
-    try:
-        with open(file_path, "r") as file:
-            sql_content = file.read()
-
-        formatted_content = sql_content
-
-        if uppercase:
-            # Convert SQL keywords to uppercase using the function from uppercase.py
-            formatted_content = convert_keywords_to_uppercase(formatted_content)
-
-        if leading_comma:
-            # Placeholder for leading comma logic
-            pass
-
-        # Write the formatted content back to the file
-        with open(file_path, "w") as file:
-            file.write(formatted_content)
-
-        typer.echo(
-            f"Formatted file {file_path} with uppercase={uppercase} and leading_comma={leading_comma}"
-        )
-
-    except FileNotFoundError:
-        typer.echo(f"File not found: '{file_path}'", err=True)
-    except Exception as e:
-        typer.echo(f"An error occurred: {e}", err=True)
+    print("Hello")
 
 
-if __name__ == "__main__":
-    app()
+@app.command()
+def uppercase(sql_file: str):
+    """
+    Lints a SQL file to ensure all keywords are uppercase.
+    """
+    convert_keywords_to_uppercase(sql_file)
+    return f"Converted {sql_file} to uppercase."

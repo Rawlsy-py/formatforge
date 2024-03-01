@@ -1,9 +1,4 @@
-"""Module to convert SQL keywords to uppercase.
-
-    Returns:
-        _type_: _description_
-        
-"""
+"""Convert all SQL keywords to uppercase."""
 
 import re
 
@@ -96,8 +91,13 @@ pattern = re.compile(r"\b(" + "|".join(sql_keywords) + r")\b", re.IGNORECASE)
 
 
 def convert_keywords_to_uppercase(sql_text):
-    """
-    Converts SQL keywords to uppercase.
+    """Convert all SQL keywords to uppercase.
+
+    Args:
+        sql_text (file): A file containing SQL code.
+
+    Returns:
+        file: Updated file with all SQL keywords converted to uppercase.
     """
 
     # Function to convert matched keywords to uppercase
