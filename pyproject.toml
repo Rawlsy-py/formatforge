@@ -7,17 +7,17 @@ readme = "README.md"
 packages = [{ include = "dbt_lint" }]
 
 [tool.poetry.scripts]
-dbt-lint = 'dbt_lint.main:app'
+dbt-lint = "dbt_lint.main:app"
 
 
 [tool.poetry.dependencies]
 python = "^3.11"
-typer = { extras = ["all"], version = "^0.1.0" }
+typer = { extras = ["all"], version = "^0.9.0" }
 pydantic = "^1.9.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^6.2.5"
-ruff = "^0.0.79"
+ruff = "^0.3.0"
 mypy = "^0.971"
 
 
