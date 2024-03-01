@@ -7,7 +7,7 @@ app = typer.Typer()
 @app.callback()
 def callback():
     """
-    dbt-lint is a linter for dbt projects.
+    formatforge is a linter for dbt projects.
     """
 
 
