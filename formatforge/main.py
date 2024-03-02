@@ -1,5 +1,8 @@
 import typer
 from formatforge.uppercase import convert_keywords_to_uppercase
+import pkg_resources
+
+version = pkg_resources.get_distribution("formatforge").version
 
 app = typer.Typer()
 
@@ -12,17 +15,21 @@ def callback():
 
 
 @app.command()
-def hello():
+def version(
+    version: str = typer.Option(
+        version, "--version", "-v", help="The version of the program."
+    )
+):
     """
-    Say hello.
+    Display formatforge's current version.
     """
-    print("Hello")
+    print(f"The current version of formatforge is {version}.")
 
 
 @app.command()
 def uppercase(sql_file: str):
     """
-    Lints a SQL file to ensure all keywords are uppercase.
+    Formats a SQL file to ensure all keywords are uppercase.
     """
     convert_keywords_to_uppercase(sql_file)
     return f"Converted {sql_file} to uppercase."
