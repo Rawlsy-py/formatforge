@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "formatforge"
-version = "0.1.1"
+version = "0.1.2"
 description = "A simple linter for dbt projects"
 authors = ["Rawlsy-py <christopher_m_mitchell@live.co.uk>"]
 readme = "README.md"
